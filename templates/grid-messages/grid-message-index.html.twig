@@ -1,0 +1,11 @@
+{# templates/grid-message/grid-message-index.html.twig #}
+{% extends 'grid-message-layout.html.twig' %}
+
+{% block title %}Send message{% endblock %}
+
+{% block content %}
+    <h3>{{ message }}</h3>
+    <button class="important">
+        <a href="{{ path('send_grid_message') }}">Send new message</a>
+    </button>
+{% endblock %}

@@ -1,0 +1,4 @@
+send_grid_message:
+    path: /send-grid-message
+    controller: App\Controller\GridController::sendMessageAction
+ 

@@ -1,0 +1,25 @@
+{# templates/grid-message-layout.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="application-name" content="Casino World">
+
+        <title>
+            {% block title %}
+                Net2Grid|
+                {% if page_title is defined %}
+                    {{ page_title }}
+                {% endif %}
+            {% endblock %}
+        </title>
+    </head>
+    <body style="text-align: center;">
+        <h1 style="color: green; text-decoration: underline;">Net2Grid</h1>
+        <div class="page">
+            <div class="page-content container-fluid">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

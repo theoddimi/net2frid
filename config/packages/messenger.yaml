@@ -1,0 +1,21 @@
+framework:
+    messenger:
+        failure_transport: failed
+
+        transports:
+            # https://symfony.com/doc/current/messenger.html#transport-configuration
+            grid:
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+                serializer: App\Message\Serializer\GridJsonMessageSerializer
+                options:
+                    auto_setup: false
+                    queues:
+                        cand_s64s_results:
+                          binding_keys:
+                            - cand_s64s_results
+            failed: 'doctrine://default?queue_name=failed'
+            external_messages:
+               dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+
+        routing:
+            'App\Message\GridMessage': grid

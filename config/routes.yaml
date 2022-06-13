@@ -1,0 +1,4 @@
+app_directory:
+    # loads routes from the YAML or XML files found in that directory
+    resource: 'routes/routing/'
+    type:     directory
