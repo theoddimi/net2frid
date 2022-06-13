@@ -4,7 +4,7 @@
 Net2Grid - Sending to and receiving messages from exchange on RabbitMQ.
 
 # Installation
-- `git clone https://github.com/theoddimi/net2frid.git`
+- `git clone https://github.com/theoddimi/net2grid.git`
 - `composer install`
 - `php bin/console doctrine:migrations:migrate`
 - `symfony server:start --port=<port>`
